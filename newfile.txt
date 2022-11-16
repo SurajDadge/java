@@ -1,0 +1,210 @@
+package com.mycompany;
+import java.util.Scanner;
+abstract class cafe
+{
+    abstract void menu();
+    abstract void order();
+    abstract void bill();
+
+}
+    class cafe_1 extends cafe
+    {
+        String menu_choice;
+        String show_menu;
+        int bill_choice;
+        Scanner sc = new Scanner(System.in);
+
+        void menu()
+        {
+            System.out.println("Enter yes to see menu");
+            show_menu = sc.nextLine();
+            switch (show_menu)
+            {
+                case "yes":
+                    System.out.println("1.samosa: 50rs \n2.poha: 30 \n3.chai: 10");
+                    break;
+                default:
+                    System.out.println("Entered wrong choice");
+                    break;
+            }
+        }
+
+        void order() {
+            System.out.println("Enter your menu choice from samosa,poha,chai");
+            menu_choice = sc.nextLine();
+            switch (menu_choice) {
+                case "samosa":
+                    System.out.println("samosa is served");
+
+                    break;
+
+                case "poha":
+                    System.out.println("poha is served");
+                    break;
+
+                case "chai":
+                    System.out.println("chai is served");
+                    break;
+
+                default:
+                    System.out.println("Entered wrong choice");
+                    break;
+            }
+        }
+
+        void bill() {
+            System.out.println("1.samosa: 50rs \n2.poha: 30 \n3.chai: 10");
+            System.out.println("Enter your order choice for billing from 1,2,3");
+            bill_choice = sc.nextInt();
+
+            switch (bill_choice) {
+                case 1:
+                    System.out.println("Pay 50Rs");
+                    break;
+
+                case 2:
+                    System.out.println("Pay 30Rs");
+                    break;
+
+                case 3:
+                    System.out.println("Pay 10Rs");
+                    break;
+
+            }
+
+        }
+    }
+
+        class cafe_2 extends cafe
+        {
+            String menu_choice;
+            String show_menu;
+            int bill_choice;
+            Scanner sc = new Scanner(System.in);
+
+            void menu()
+            {
+                System.out.println("Enter yes to see menu");
+                show_menu = sc.nextLine();
+                switch (show_menu)
+                {
+                    case "yes":
+                        System.out.println("1.Cake: 50rs \n2.pastry: 30 \n3.puff: 10");
+                        break;
+                    default:
+                        System.out.println("Entered wrong choice");
+                        break;
+                }
+            }
+
+            void order() {
+                System.out.println("Enter your menu choice from cake,pastry,puff");
+                menu_choice = sc.nextLine();
+                switch (menu_choice) {
+                    case "cake":
+                        System.out.println("samosa is served");
+
+                        break;
+
+                    case "pastry":
+                        System.out.println("poha is served");
+                        break;
+
+                    case "puff":
+                        System.out.println("chai is served");
+                        break;
+
+                    default:
+                        System.out.println("Entered wrong choice");
+                        break;
+                }
+            }
+
+            void bill() {
+                System.out.println("1.cake: 500rs \n2.pastry: 60 \n3.puff: 15");
+                System.out.println("Enter your order choice for billing from 1,2,3");
+                bill_choice = sc.nextInt();
+
+                switch (bill_choice) {
+                    case 1:
+                        System.out.println("Pay 500Rs");
+                        break;
+
+                    case 2:
+                        System.out.println("Pay 60Rs");
+                        break;
+
+                    case 3:
+                        System.out.println("Pay 15Rs");
+                        break;
+
+                }
+            }
+        }
+
+class cafe_3 extends cafe
+{
+    String menu_choice;
+    String show_menu;
+    int bill_choice;
+    Scanner sc = new Scanner(System.in);
+
+    void menu()
+    {
+        System.out.println("Enter yes to see menu");
+        show_menu = sc.nextLine();
+        switch (show_menu)
+        {
+            case "yes":
+                System.out.println("1.pizza: 50rs \n2.burger: 30 \n3.rolls: 10");
+                break;
+            default:
+                System.out.println("Entered wrong choice");
+                break;
+        }
+    }
+
+    void order() {
+        System.out.println("Enter your menu choice from pizza,burger,rolls");
+        menu_choice = sc.nextLine();
+        switch (menu_choice) {
+            case "pizza":
+                System.out.println("pizza is served");
+
+                break;
+
+            case "burger":
+                System.out.println("poha is burger");
+                break;
+
+            case "rolls":
+                System.out.println("rolls is served");
+                break;
+
+            default:
+                System.out.println("Entered wrong choice");
+                break;
+        }
+    }
+
+    void bill() {
+        System.out.println("1.pizza: 300rs \n2.burger: 80 \n3.rolls: 120");
+        System.out.println("Enter your order choice for billing from 1,2,3");
+        bill_choice = sc.nextInt();
+
+        switch (bill_choice) {
+            case 1:
+                System.out.println("Pay 300Rs");
+                break;
+
+            case 2:
+                System.out.println("Pay 80Rs");
+                break;
+
+            case 3:
+                System.out.println("Pay 120Rs");
+                break;
+
+        }
+    }
+}
